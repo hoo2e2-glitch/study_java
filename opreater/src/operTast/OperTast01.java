@@ -1,0 +1,36 @@
+package operTast;
+
+import java.util.Scanner;
+
+public class OperTast01 {
+	public static void main(String[] args) {
+	      // 사용자에게 수학점수, 영어점수, 국어점수를 입력 받고,
+	      // 총점과 평균을 구한다.
+	      // 평균이 60점 초과면 합격, 60점 미만이면 불합격, 60점이면 재평가를 출력
+	      // 단 if문을 사용하지 않는다.
+	      // 평균은 소수점 2번째 자리까지만 표기한다.		
+		Scanner sc = new Scanner(System.in);
+		
+		// 초기값
+		int math = 0, eng = 0, kor = 0, total = 0;
+		double aver = 0;
+		String message = "평균이 60점 초과면 합격, 60점 미만이면 불합격, 60점이면 재평가", result = "";
+		
+		// 출력
+		System.out.println(message);
+		
+		// 총점 / 평균
+		total = math + eng + kor;
+		aver = total / 3.0;
+		
+		total = sc.nextInt();
+		aver = sc.nextInt();
+		System.out.println(total);
+		System.out.println(aver);
+		
+		
+		// 결과
+		result = aver > 60 ? "합격" : aver < 60 ? "불합격"  : "재평가";
+	
+	}
+}

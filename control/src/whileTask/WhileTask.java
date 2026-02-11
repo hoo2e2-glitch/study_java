@@ -1,0 +1,165 @@
+package whileTask;
+
+import java.util.Scanner;
+
+public class WhileTask {
+	public static void main(String[] args) {
+//      키오스크 만들기
+//      기본 판매 상품
+//      아메리카노: 2000원
+//      카페라떼: 3000원
+      
+//      1. 상품 등록
+//      2. 상품 판매
+//      3. 이름 변경 
+//      4. 가격 변경
+      
+//      등록된 물품을 판매하는 시스템
+//      판매가 완료되면 다시 첫 화면으로 돌아오기!
+
+
+		Scanner sc = new Scanner(System.in);
+		String message = "키오스크\n판매상품",
+				choiceMune = "상품을 선택해주세요.",
+				product = "1. 아메리카노\n"
+						+ "2. 카페라떼\n"
+						+ "3. 쉐이크\n"
+						+ "4. 그린티\n",
+						ame = "아메리카노",
+						latte = "카페라떼",
+						shake = "쉐이크",
+						greentea = "그린티",
+						menu = null;
+		
+		
+		
+		// 상품등록
+		int ameprice = 2000, latteprice = 3000, choice = 0;
+		
+		// 상품선택
+		while(true) {
+			System.out.println(message);
+			System.out.println(product);
+			System.out.println(choiceMune);
+			
+			choice = sc.nextInt();
+			
+			if(choice < 1 || choice > 4) {
+				System.out.println("품절입니다.");
+			}else {
+				break;
+			}
+		}
+	
+		
+		// 선택 메뉴 대입?
+		switch(choice) {
+		case 1:
+			System.out.println(ame);
+			break;
+		case 2:
+			System.out.println(latte);
+			break;
+		case 3:
+			System.out.println(shake);
+			break;
+		case 4:
+			System.out.println(greentea);
+		default:
+			break;
+		}
+		
+    case 4:
+        product4 = productName;
+        break;
+     }
+     System.out.println("이름 변경 완료");
+     
+  }else if(menuChoice == 4) {
+     System.out.println("======가격 변경 가능 목록======");
+     if(product1 != null) {
+        System.out.println("1. " + product1);
+     }
+     if(product2 != null) {
+        System.out.println("2. " + product2);
+     }
+     if(product3 != null) {
+        System.out.println("3. " + product3);
+     }
+     if(product4 != null) {
+        System.out.println("4. " + product4);
+     }
+     System.out.println("======가격 변경 가능 목록======");
+     
+     productChoice = sc.nextInt();
+     
+     System.out.println("변경할 가격을 입력하세요.");
+     productPrice = sc.nextInt();
+     
+     switch(productChoice) {
+     case 1:
+        productPrice1 = productPrice;
+        break;
+     case 2:
+        productPrice2 = productPrice;
+        break;
+     case 3:
+        productPrice3 = productPrice;
+        break;
+     case 4:
+        productPrice4 = productPrice;
+        break;
+     }
+     System.out.println("가격 변경 완료");
+  }else if(menuChoice == 5) {
+     System.out.println("======상품 삭제 가능 목록======");
+     if(product1 != null) {
+        System.out.println("1. " + product1);
+     }
+     if(product2 != null) {
+        System.out.println("2. " + product2);
+     }
+     if(product3 != null) {
+        System.out.println("3. " + product3);
+     }
+     if(product4 != null) {
+        System.out.println("4. " + product4);
+     }
+     System.out.println("======상품 삭제 가능 목록======");
+     
+     System.out.println("삭제할 상품을 선택하세요.");
+     productChoice = sc.nextInt();
+     
+     switch(productChoice) {
+     case 1:
+        product1 = null;
+        productPrice1 = 0;
+        break;
+     case 2:
+        product2 = null;
+        productPrice1 = 0;
+        break;
+     case 3:
+        product3 = null;
+        productPrice1 = 0;
+        break;
+     case 4:
+        product4 = null;
+        productPrice1 = 0;
+        break;
+     }
+     productCount--;
+     System.out.println("상품 삭제 완료");
+  }else {
+     
+  }
+  
+  	
+		
+		
+		
+
+		
+	}
+
+}
