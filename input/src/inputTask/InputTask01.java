@@ -11,20 +11,21 @@ public class InputTask01 {
 	      // 단 next()만 사용
 
 		
-		Scanner sc = new Scanner(System.in);
-		String message = "더하기", num = null, num1 = null;
-		
-		System.out.println(message);
-		
-		num = sc.next();
-		num1 = sc.next();
-		System.out.println(num + "+" + num1 + "= 3");
+//		Scanner sc = new Scanner(System.in);
+//		String message = "더하기", num = null, num1 = null;
+//		
+//		System.out.println(message);
+//		
+//		num = sc.next();
+//		num1 = sc.next();
+//		System.out.println(num + "+" + num1 + "= 3");
 		
 //		num = sc.nextLine();
 //		num1 = sc.nextLine();
 //		System.out.println(num + num1);
 		
 		
+// 			강사님 풀이		
 	      // Scanner를 사용하여, 두 정수를 입력 받고,
 	      // 덧셈 결과를 출력하시오.
 	      // 단 next()만 사용

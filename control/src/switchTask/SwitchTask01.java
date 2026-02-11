@@ -12,16 +12,16 @@ public class SwitchTask01 {
 //      사용자가 입력한 값의 계절을 맞추는 코드 작성
 //      사용자 입력: 9
 //      출력 예시: 가을
-		Scanner sc = new Scanner(System.in);
-		
-		int winter = 12, spring = 3, summer = 6, fall = 9;
-		String message = "출력 예시: 가을", season = "";
-		
-		System.out.println(message);
-		season = sc.next();
-		
-		switch(season) {
-		case 1:
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int winter = 12, spring = 3, summer = 6, fall = 9;
+//		String message = "출력 예시: 가을", season = "";
+//		
+//		System.out.println(message);
+//		season = sc.next();
+//		
+//		switch(season) {
+//		case 1:
 			
 			
 //	      계절 맞추기
@@ -32,6 +32,8 @@ public class SwitchTask01 {
 //	      사용자가 입력한 값의 계절을 맞추는 코드 작성
 //	      사용자 입력: 9
 //	      출력 예시: 가을
+
+//			강사님 풀이
 	      Scanner sc = new Scanner(System.in);
 	      String message = "월을 입력하세요.\nex)10", seasonResult = "";
 	      int month = 0, season = 0;
@@ -67,7 +69,7 @@ public class SwitchTask01 {
 	      
 	   }
 	}
-}
+
 
 			
 			

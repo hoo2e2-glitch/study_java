@@ -31,7 +31,8 @@ public class FormatTask02 {
 		// System.out.printf("총점: %5d점", num4);
 		System.out.printf(result, name, num1, num2, num3, num4);
 		
-		
+
+		// 강사님 풀이
 // 모두 변수에 담아서 		
 //     국어점수, 영어점수, 수학점수를 받아서 서식에 맞게 출력
 //      int mathScore = 0, korScore = 0, engScore = 0, totalScore = 0;

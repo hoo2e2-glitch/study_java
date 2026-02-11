@@ -6,22 +6,22 @@ public class CastingTask04 {
 //      "0.12346", "0.5130", "78", "9.133";
 //     4개 값을 더해서 123456789를 출력하기
 		
-		String num = "", num1 = "", num2 = "", num3 = "", result= "";
-		
-		// 0.4/0.1/ /x/int 
-		num = "0.12346";
-		num1 = "0.5130";
-		num2 = "78";
-		num3 = "9.133";
-		
-		double one = Double.parseDouble(num); 
-		double two = Double.parseDouble(num1);
-		int three = Integer.parseInt(num2);
-		double four = Double.parseDouble(num3); 
-		System.out.println("12345678");
-	
-		String result = "%.5f %.1f %d %f";
-		System.out.printf(result, one, two, three, four);
+//		String num = "", num1 = "", num2 = "", num3 = "", result= "";
+//		
+//		// 0.4/0.1/ /x/int 
+//		num = "0.12346";
+//		num1 = "0.5130";
+//		num2 = "78";
+//		num3 = "9.133";
+//		
+//		double one = Double.parseDouble(num); 
+//		double two = Double.parseDouble(num1);
+//		int three = Integer.parseInt(num2);
+//		double four = Double.parseDouble(num3); 
+//		System.out.println("12345678");
+//	
+//		String result = "%.5f %.1f %d %f";
+//		System.out.printf(result, one, two, three, four);
 		
 		
 //      (심화)      

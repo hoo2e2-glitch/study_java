@@ -19,27 +19,29 @@ public class ControlTask01 {
 		
 		
 		
-		Scanner sc = new Scanner(System.in);
-		String messeage = "출력 예시)\n구매상품: 콜라 2개\n판매가격: 4000원\n거스름돈: 6000원", result = null;
-		
-		System.out.println(messeage);
-		
-		int momey = 10000, coca = 2000, pepsi = 1500, mac = 1000;
-		 
-		coca = sc.nextInt();
-		System.out.println(coca + "콜라");
-		
-		// coca * 2 = 
-		if() {
-			
-		};
-		
-		package isTask;
-
-		import java.util.Scanner;
-
-		public class ifTask {
-		   public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		String messeage = "출력 예시)\n구매상품: 콜라 2개\n판매가격: 4000원\n거스름돈: 6000원", result = null;
+//		
+//		System.out.println(messeage);
+//		
+//		int momey = 10000, coca = 2000, pepsi = 1500, mac = 1000;
+//		 
+//		coca = sc.nextInt();
+//		System.out.println(coca + "콜라");
+//		
+//		// coca * 2 = 
+//		if() {
+//			
+//		};
+//		
+//		package isTask;
+//
+//		import java.util.Scanner;
+//
+//		public class ifTask {
+//		   public static void main(String[] args) {
+			   
+//			  강사님 풀이 
 //		      거스름돈 계산하기
 //		      1번 상품: 코카콜라 - 2000원
 //		      2번 상품: 팹시 - 1500원
@@ -74,7 +76,7 @@ public class ControlTask01 {
 		         totalPrice = cocaColaPrice * stock;
 		      }else if(choice == 2) {
 		         choiceDrink = pepsi;
-		         totalPrice = pepsiPrice * stock;/
+		         totalPrice = pepsiPrice * stock;
 		      }else if(choice == 3) {
 		         choiceDrink = mcCol;
 		         totalPrice = mcColPrice * stock;
@@ -86,28 +88,9 @@ public class ControlTask01 {
 		      
 		      System.out.printf(result, choiceDrink, stock, totalPrice, money);
 		   }
-		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		
 		
 		
 	}
 
-}
+
