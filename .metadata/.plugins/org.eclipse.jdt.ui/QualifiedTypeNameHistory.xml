@@ -5,4 +5,9 @@
     <fullyQualifiedTypeName name="methodTask.MethodTask02"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="classTest.Animal"/>
+    <fullyQualifiedTypeName name="classTask.Sports"/>
+    <fullyQualifiedTypeName name="classTask.Student"/>
+    <fullyQualifiedTypeName name="classTask.SuperCar"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
 </qualifiedTypeNameHistroy>
