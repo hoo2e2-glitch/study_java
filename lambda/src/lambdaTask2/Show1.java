@@ -2,6 +2,6 @@ package lambdaTask2;
 
 @FunctionalInterface
 public interface Show1 {
-	public void name(String s, int n);
+	public String jumper(String expression, int index);
 
 }

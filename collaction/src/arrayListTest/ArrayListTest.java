@@ -11,33 +11,44 @@ public class ArrayListTest<T>{
 	T data;
 	
 	public static void main(String[] args) {
-		
 		ArrayList<String> datas = new ArrayList<String>();
-//		datas[0] = 10; - x
 		
-		datas.add("가나");
-		datas.add("다라");
-		datas.add("마바");
-		datas.add("사아");
-		datas.add("한글");
+//		CRUD
+//		C: Create(추가)
+//		R: Read(읽기) == Get
+//		U: Update(수정)
+//		D: Delete(삭제)
+		
+		datas.add("이규학");
+		datas.add("약소훈");
+		datas.add("썬윤성");
+		datas.add("Yes규호");
+		datas.add("유중의미");
 		
 		System.out.println(datas);
-		
-		datas.get(3);
 		System.out.println(datas.get(3));
 		
-//		사아
-		String prev = datas.set(3, "노");
+//		Yes규호
+		String prev = datas.set(3, "No규호");
 		System.out.println(datas);
 		
-//		밀어줌
 		String removed = datas.remove(0);
 		System.out.println(removed);
 		System.out.println(datas);
+		
+		
 		
 	}
 	
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

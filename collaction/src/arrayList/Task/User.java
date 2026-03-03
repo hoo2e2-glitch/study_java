@@ -2,11 +2,15 @@ package arrayList.Task;
 
 public class User {
 	
-	private String name;
+//	1. private
+//	ex) 
+//	id -> test123@gmail.com
 	private String id;
+	private String name;
 	private String password;
 	private String phone;
 	
+//	2. 기본 생성자, 초기화 생성자
 	public User() {;}
 
 	public User(String name, String id, String password, String phone) {
@@ -16,6 +20,7 @@ public class User {
 		this.phone = phone;
 	}
 
+//	3. getter, setter
 	protected String getName() {
 		return name;
 	}
@@ -48,32 +53,27 @@ public class User {
 		this.phone = phone;
 	}
 
+//	4. toString()
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("User [name=");
-		builder.append(name);
-		builder.append(", id=");
-		builder.append(id);
-		builder.append(", password=");
-		builder.append(password);
-		builder.append(", phone=");
-		builder.append(phone);
-		builder.append("]");
-		return builder.toString();
+		return "User [id=" + id + ", name=" + name + ", password=" + password + ", phone=" + phone + "]";
 	}
 	
+//	5. Equals, Hashcode
 	@Override
 	public int hashCode() {
-		return super.hashCode();
+		return Objects.hash(id);
 	}
-	
 	@Override
 	public boolean equals(Object obj) {
-		return super.equals(obj);
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		User other = (User) obj;
+		return Objects.equals(id, other.id);
 	}
-	
-	eq
-	
-	
 }
+

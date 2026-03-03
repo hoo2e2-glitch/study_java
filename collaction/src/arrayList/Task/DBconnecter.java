@@ -4,9 +4,6 @@ import java.util.ArrayList;
 
 public class DBconnecter {
 	
-	public static ArrayList<USer> arr = new ArrayList<User>();
-	
-	
-	
+	public static ArrayList<User> users = new ArrayList<User>();
 
 }
