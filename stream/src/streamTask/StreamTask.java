@@ -7,9 +7,17 @@ public class StreamTask {
 	public static void main(String[] args) {
 
 //		강사님 풀이
-//		  public String addNamePrefix(String name) {
-//		      return "이름 :" + name;
-//		   }
+//		public String addNamePrefix(String name) {
+//			return "이름 :" + name;
+//		}
+		
+//		public boolean filterUser30s(User user) {
+//			return user.getAge() >= 30 && user.getAge() <= 39;
+//		}
+		
+//		public String reverseString(String str) {
+//			return new StringBuilder(str).reverse().toString();
+//		}
 		  
 		User user1 = new User(1L, "홍길동", 20, "개발자", "남");
 		User user2 = new User(2L, "장보고", 30, "기획자", "남");
@@ -27,11 +35,10 @@ public class StreamTask {
 		
 //		강사님 풀이
 //	    users.stream().map((user) -> "이름: " + user.getName()).forEach((name) -> { System.out.println(name);});
-
 //		※ ↓ 참조형으로 변경하기
 //		users.stream().map(User::getName).forEach(System.out::println);
 //		users.stream().map((user) -> "이름: " + user.getName()).forEach(System.out::println);
-		
+//		※ ↓ 참조형으로 변경하기
 //		강사님풀이
 //	    StreamTask st = new StreamTask();
 //	    users.stream().map(User::getName).map(st::addNamePrefix).forEach(System.out::println);
@@ -45,8 +52,9 @@ public class StreamTask {
 //		users.stream().filter(user -> user.getName().charAt(0) == '김').forEach(System.out::println);
 		
 //		강사님 풀이
-		MyFind myFind = (user) -> user.getName().startsWith("김");
-	      users.stream().filter(myFind::isStartName).forEach(System.out::println);
+//		MyFind myFind = (user) -> user.getName().startsWith("김");
+//		users.stream().filter(myFind::isStartWithKim).forEach(System.out::println);
+
 				
 //		30대 유저의 직업만 거꾸로 뒤집어 출력
 //		"자획기"
@@ -63,10 +71,6 @@ public class StreamTask {
 						.map(job -> new StringBuilder(job).reverse().toString())
 						.forEach(System.out::println);
 	
-//		
-//		MyFind02 myFind2 = (user) -> user.getAge().reverse().
-//									.filter(user -> user.getJob())
-//									.map(users.reverse(users)).forEach(System.out::println);
 		
 		
 		
@@ -77,6 +81,19 @@ public class StreamTask {
 		        .filter(user -> user.getAge() >= 30 && user.getAge() < 40)
 		        .map(myFind2::reverseJob)
 		        .forEach(System.out::println);
+		        
+//		        강사님 풀이
+//				30대 유저의 직업만 거꾸로 뒤집어 출력
+//				"자획기"
+//				"관방소"
+				StreamTask st = new StreamTask();
+				users
+					.stream()
+					.filter(st::filterUser30s)
+					.map(User::getJob)
+					.map(st::reverseString)
+					.forEach(System.out::println);
+				
 		
 		
 		

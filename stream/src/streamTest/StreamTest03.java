@@ -30,11 +30,11 @@ public class StreamTest03 {
 //      .mapToObj()
       
 //      Stream<Integer> -> IntStream
-      int totalAge = users.stream()
-         .mapToInt(user -> user.getAge())
-         .sum();
+		int totalAge = users.stream()
+			.mapToInt(user -> user.getAge())
+			.sum();
       
-      System.out.println(totalAge);
+		System.out.println(totalAge);
       
 		
 	}

@@ -19,9 +19,6 @@ public class StreamTask02 {
 		System.out.println(data);
 		
 		
-		
-		
-		
 //		Character str = data
 //			.chars()
 //			.filter(i -> i % 2 == 0)

@@ -12,20 +12,16 @@ public class StreamTest02 {
 //		collect(), Collectors
 //		Stream 객체의 형변환
 		
-		
 //		ArrayList -> String
-//		ArrayList<Integer> datas1 = new ArrayList<Integer>();
-//		IntStream.rangeClosed(1, 10).forEach(datas1::add);
-//		
-//		System.out.println(datas1);
+		ArrayList<Integer> datas1 = new ArrayList<Integer>();
+		IntStream.rangeClosed(1, 10).forEach(datas1::add);
+		System.out.println(datas1);
 		
 //		통채로 리턴타입/문자열값
-//		String str = datas1.stream()
-//					.map(String::valueOf)
-//					.collect(Collectors.joining(", "));
-//		
+//		String str = datas1.stream() // ArrayList<Integer> → Stream<Integer>
+//					.map(String::valueOf) // Integer → String
+//					.collect(Collectors.joining(", ")); // Stream<String> → 하나의 String으로 합침
 //		System.out.println(str);
-		
 		
 //		mapToObj() : 기본 자료형 -> 클래스형 자료형으로 형변환시켜주는 스트림 메서트
 		
@@ -60,13 +56,13 @@ public class StreamTest02 {
 //				.collect(Collectors.toList());
 
 //		2번
-		 IntStream
-				.range(0, 10)
-				.boxed()
-				.collect(Collectors.toList()) // 여기까지는 collect 메서드 // map 쓰고 싶으면 .stream() 사용 후 넣기
-				.stream()
-				.map((n) -> n + 1)
-				.forEach(System.out::println);
+//		 IntStream
+//				.range(0, 10)
+//				.boxed()
+//				.collect(Collectors.toList()) // 여기까지는 collect 메서드 // map 쓰고 싶으면 .stream() 사용 후 넣기
+//				.stream()
+//				.map((n) -> n + 1)
+//				.forEach(System.out::println);
 				
 		
 		

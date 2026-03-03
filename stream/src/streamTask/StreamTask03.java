@@ -18,7 +18,9 @@ public class StreamTask03 {
 		
 		List<User> user = Arrays.asList(user1, user2, user3, user4, user5, user6);
 				
-//		user 이름만 모두 붙혀서 출력
+//		유저의 이름만 모두 붙여서 출력
+//		"홍길동, 장보고, 이순신, 김영희, 김철수, 김영숙"
+//		System.out.println(user1.getName() + ", " + user2.getName() + ", " + user3.getName() + ", " + user4.getName() + ", "+ user5.getName() + ", "+ user6.getName());
 //		String str = user.stream()
 //						.map(User::getName)
 //						.collect(Collectors.joining(", "));
@@ -27,10 +29,27 @@ public class StreamTask03 {
 		
 		
 		
-//		user 성별 남자면 man / 여자면 woman 붙이기
+//		유저의 성별이 "남"이라면 "man",
+//		"여"라면 "woman"으로 바꿔서 모두 출력하기
 		
-		user.stream().map(u -> u.getGender() + " : " + (u.getGender().equals("남") ? man : woman)).forEach(System.out::println);
-				
+//		user.stream().map(User::getGender).map(gen -> gen + ": " + (gen.equals("남") ? "man" : "woman" )).forEach(System.out::println);
+		
+//		user.stream()
+//	     .map(users -> {
+//	         String gen = users.getGender();
+//	         return gen + ": " + (gen.equals("남") ? "man" : "woman");
+//	     })
+//	     .forEach(System.out::println);
+		
+		user.stream().map(User::getGender)
+	     .map(gen -> {
+	         if (gen.equals("남")) {
+	             return gen + ": man";
+	         } else {
+	             return gen + ": woman";
+	         }
+	     })
+	     .forEach(System.out::println);
 	}
 
 }
