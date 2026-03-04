@@ -1,6 +1,7 @@
 package streamTask;
 
 import java.util.Arrays;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -32,7 +33,7 @@ public class StreamTask03 {
 //		유저의 성별이 "남"이라면 "man",
 //		"여"라면 "woman"으로 바꿔서 모두 출력하기
 		
-//		user.stream().map(User::getGender).map(gen -> gen + ": " + (gen.equals("남") ? "man" : "woman" )).forEach(System.out::println);
+		user.stream().map(User::getGender).map(gen -> gen + ": " + (gen.equals("남") ? "man" : "woman" )).forEach(System.out::println);
 		
 //		user.stream()
 //	     .map(users -> {
@@ -52,4 +53,19 @@ public class StreamTask03 {
 	     .forEach(System.out::println);
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

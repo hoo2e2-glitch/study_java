@@ -23,46 +23,6 @@ public class User {
 		this.gender = gender;
 	}
 	
-	// 3
-	protected Long getId() {
-		return id;
-	}
-
-	protected void setId(Long id) {
-		this.id = id;
-	}
-
-	protected String getName() {
-		return name;
-	}
-
-	protected void setName(String name) {
-		this.name = name;
-	}
-
-	protected int getAge() {
-		return age;
-	}
-
-	protected void setAge(int age) {
-		this.age = age;
-	}
-
-	protected String getJob() {
-		return job;
-	}
-
-	protected void setJob(String job) {
-		this.job = job;
-	}
-
-	protected String getGender() {
-		return gender;
-	}
-
-	protected void setGender(String gender) {
-		this.gender = gender;
-	}
 	
 	// 4
 	@Override
@@ -70,7 +30,47 @@ public class User {
 		return "User [id=" + id + ", name=" + name + ", age=" + age + ", job=" + job + ", gender=" + gender + "]";
 	}
 	
-	
+	// 3
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getJob() {
+		return job;
+	}
+
+	public void setJob(String job) {
+		this.job = job;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	// 5
 	@Override
 	public boolean equals(Object obj) {
@@ -92,5 +92,5 @@ public class User {
 	}
 	
 	
-//			
+		
 }

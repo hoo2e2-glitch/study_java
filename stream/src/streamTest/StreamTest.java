@@ -14,11 +14,10 @@ public class StreamTest {
 	public static void main(String[] args) {
 		
 //		IntStream: 숫자(정수)를 이용한 Stream 문법을 사용할 수 있게 제공해주는 인터페이스(객체)
-//
-		
 //		range(): 반복할 수 있게 횟수(범위)를 만들어주는 메서드
 //		IntStream.range(0, 10).forEach((num) -> { System.out.println(num);} );
 //		IntStream.rangeClosed(1, 20).forEach((num) -> {System.out.println(num);});
+		
 		// 람다식 → 중괄호 {} 안에 '실행할 코드' 를 써야 함
 //		안됨
 //		IntStream.rangeClosed(1, 20).forEach((num) -> {(System.out::print)});

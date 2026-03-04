@@ -4,20 +4,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class StreamTask {
+//		강사님 풀이
+		public String addNamePrefix(String name) {
+			return "이름 :" + name;
+		}
+	
+		public boolean filterUser30s(User user) {
+			return user.getAge() >= 30 && user.getAge() <= 39;
+		}
+	
+		public String reverseString(String str) {
+			return new StringBuilder(str).reverse().toString();
+		}
+		
 	public static void main(String[] args) {
 
-//		강사님 풀이
-//		public String addNamePrefix(String name) {
-//			return "이름 :" + name;
-//		}
-		
-//		public boolean filterUser30s(User user) {
-//			return user.getAge() >= 30 && user.getAge() <= 39;
-//		}
-		
-//		public String reverseString(String str) {
-//			return new StringBuilder(str).reverse().toString();
-//		}
 		  
 		User user1 = new User(1L, "홍길동", 20, "개발자", "남");
 		User user2 = new User(2L, "장보고", 30, "기획자", "남");
