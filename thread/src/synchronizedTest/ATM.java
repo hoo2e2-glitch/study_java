@@ -1,0 +1,32 @@
+package synchronizedTest;
+
+public class ATM implements Runnable{
+	
+	int momey = 10000;
+	
+	public void whihdraw(int money) {
+//		동기: synchronized(객체){}
+		synchronized (this) {
+			this.momey -= money;
+		}
+		
+		System.out.println(Thread.currentThread().getName() + "이(가)" + money + "원 출금");
+		System.out.println("현재 잔액: " +  this.momey + "원");
+	}
+	
+	@Override
+	public void run() {
+		for(int i = 0; i < 5; i++) {
+			whihdraw(1000);
+			
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+}

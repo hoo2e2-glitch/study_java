@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class StreamTest001 {
 	public static void main(String[] args) {
 		
-//		IntStream : 숫자들이 컨베이어 벨트 위에서 자동으로 흘러옴
+//		IntStream -> int: 숫자들이 컨베이어 벨트 위에서 자동으로 흘러옴 
 //		핵심: IntStream = 숫자 전용 Stream! 그냥 for문을 더 간결하게 쓰는 것
 		
 		

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -20,8 +21,24 @@ public class StreamTask05 {
 		
 		
 //      1) ArrayList에 있는 모든 값을 더한 후 출력 {10, 20, 30, 40, 50, 60}
+		Integer[] arr1 = {10, 20, 30, 40, 50, 60};
+
+		ArrayList<Integer> num = new ArrayList<Integer>(Arrays.asList(10, 20, 30, 40, 50, 60));
+		int number = num.stream().mapToInt(Integer::intValue).sum();
+//		int number = num.stream().mapToInt(i -> i).sum(); // 람다
+//		int number = num.stream().reduce(0, Integer::sum); // .reduce()
+		System.out.println(number);
 		
+		ArrayList<Integer> num2 = new ArrayList<Integer>(Arrays.asList(arr1));
 		
+		Iterator<Integer> iter = num2.iterator();
+		int total = 0;
+		while(iter.hasNext()) {
+			total += iter.next();
+		}
+		
+		System.out.println(total);
+
 		
 //      2) 각각의 Member가 들어가 있는 ArrayList<Member>가 존재한다.
 //      모든 Member의 취미를 검토하여, 개발을 좋아하는 사람의 이름과 취미를
