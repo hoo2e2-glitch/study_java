@@ -1,10 +1,9 @@
 package hashset.task;
 
 import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
 public class HashSetTask {
 	   public static void main(String[] args) {
@@ -18,28 +17,25 @@ public class HashSetTask {
 	     datas = new ArrayList<String>(new HashSet<String>(datas));
 	     System.out.println(datas);	
 	     
-//	     나머지 붙이기
-	     HashSet<Character> set = new HashSet<Character>();
-	     
-//	     반복돌려서 넣기
-	     for(String aa : datas) {
-	    	 for(char c :  aa.toCharArray()) {
-	    		 set.add(c);
-	    	 };
-	     };
-	     
-	     System.out.println(set);	
-	     
-	     
-//	     결과넣기
-	     ArrayList result = new ArrayList();
-	     	
-	     for(char c : set) {
-	    	 result += c;
-	     };
-	     
-	     System.out.println(result);
-	      
-		  
-	   }
-}
+	     Dedupe dedupe = (expression) -> {
+				HashSet<String> dedupeHashSet = new HashSet<String>(expression);
+				HashSet<Character> charHashSet = new HashSet<Character>();
+				String result = "";
+				
+				for(String str: dedupeHashSet) {
+					for(char c: str.toCharArray()) {
+						charHashSet.add(c);
+					}
+				}
+				
+				for(char c: charHashSet) {
+					result += c;
+				}
+				
+				return result;
+			};
+			
+			String result = dedupe.dedupe(datas);
+			System.out.println(result);
+		}
+	}

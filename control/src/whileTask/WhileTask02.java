@@ -66,26 +66,26 @@ public class WhileTask02 {
 		// 입력값: 10, 50, 30, -20, 10, 20
 	
 		      
-		      Scanner sc = new Scanner(System.in);
-		      String message = "정수를 입력하세요\n10", 
-		            expression = null, prev = "", result = "";
-		      int total = 0, count = 0;
+		      Scanner sc1 = new Scanner(System.in);
+		      String message1 = "정수를 입력하세요\n10", 
+		            expression = null, prev = "", result1 = "";
+		      int total1 = 0, count = 0;
 		      
 		      while(true) {
 		         count++;
-		         System.out.println(message);
-		         expression = sc.next();
-		         total += Integer.parseInt(expression);
+		         System.out.println(message1);
+		         expression = sc1.next();
+		         total1 += Integer.parseInt(expression);
 		         
-		         result = count == 1 ? String.valueOf(Integer.parseInt(expression)) : prev + ", " + String.valueOf(Integer.parseInt(expression));
-		         prev = result;
+		         result1 = count == 1 ? String.valueOf(Integer.parseInt(expression)) : prev + ", " + String.valueOf(Integer.parseInt(expression));
+		         prev = result1;
 		         
-		         if(total >= 100) {
-		            System.out.println(total);
-		            System.out.println(result);
+		         if(total1 >= 100) {
+		            System.out.println(total1);
+		            System.out.println(result1);
 		            break;
 		
 		
 	}
 
-}
+		      }}}

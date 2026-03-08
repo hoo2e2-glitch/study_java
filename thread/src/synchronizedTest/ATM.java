@@ -2,16 +2,16 @@ package synchronizedTest;
 
 public class ATM implements Runnable{
 	
-	int momey = 10000;
+	int money = 10000;
 	
 	public void whihdraw(int money) {
 //		동기: synchronized(객체){}
 		synchronized (this) {
-			this.momey -= money;
+			this.money -= money;
 		}
 		
 		System.out.println(Thread.currentThread().getName() + "이(가)" + money + "원 출금");
-		System.out.println("현재 잔액: " +  this.momey + "원");
+		System.out.println("현재 잔액: " +  this.money + "원");
 	}
 	
 	@Override

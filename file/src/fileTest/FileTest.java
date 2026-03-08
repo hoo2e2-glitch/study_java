@@ -12,7 +12,7 @@ public class FileTest {
 //		상대경로
 //		./ -> 현재폴더
 //		../ -> 상위폴더
-//		/ -> 최상위폴더
+//		/ -> 최상위 폴더 (루트), 절대경로 
 
 //		new FileWritter(경로(+파일), 이어쓰기 여부)
 //		BufferedWriter bufferedWriter = null;

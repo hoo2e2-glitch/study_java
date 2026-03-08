@@ -8,7 +8,6 @@ public class ThreadTest {
 		
 //		단일 쓰레드 / 동기
 //		thread_1.run();
-//		멀티 쓰레드
 //		thread2.start();
 		
 		Thread2 target1 = new Thread2();

@@ -60,25 +60,25 @@ public class OperTask02 {
             + "소\n"
             + "강아지\n"
             + "고라니",
-            animal = null, result = "";
-      Scanner sc = new Scanner(System.in);
+            animal = null, result2 = "";
+      Scanner sc2 = new Scanner(System.in);
       boolean isCat = false, isCow = false, isDog = false, isGorani = false;
       
       System.out.println(message);
-      animal = sc.next();
+      animal = sc2.next();
       
       isCat = animal.equals("고양이");
       isCow = animal.equals("소");
       isDog = animal.equals("강아지");
       isGorani = animal.equals("고라니");
       
-      result = isCat ? "고양이를 좋아하는 당신은 대훈이의 러버입니다."
+      result2 = isCat ? "고양이를 좋아하는 당신은 대훈이의 러버입니다."
             : isCow ? "소를 좋아하는 당신은 세종이의 단짝입니다."
                   : isDog ? "강아지를 좋아하는 당신은 민균이의 짝사랑입니다."
                         : isGorani ? "고라니를 좋아하는 당신은 미쳤습니다." 
                               : "잘못 입력하셨습니다.";
       
-      System.out.println(result);
+      System.out.println(result2);
 		
 		
 		

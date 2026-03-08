@@ -18,8 +18,8 @@ public class WhileTask {
 //      판매가 완료되면 다시 첫 화면으로 돌아오기!
 
 
-		Scanner sc = new Scanner(System.in);
-		String message = "키오스크\n판매상품",
+		Scanner sc1 = new Scanner(System.in);
+		String message1 = "키오스크\n판매상품",
 				choiceMune = "상품을 선택해주세요.",
 				product = "1. 아메리카노\n"
 						+ "2. 카페라떼\n"
@@ -38,11 +38,11 @@ public class WhileTask {
 		
 		// 상품선택
 		while(true) {
-			System.out.println(message);
+			System.out.println(message1);
 			System.out.println(product);
 			System.out.println(choiceMune);
 			
-			choice = sc.nextInt();
+			choice = sc1.nextInt();
 			
 			if(choice < 1 || choice > 4) {
 				System.out.println("품절입니다.");

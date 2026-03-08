@@ -1,5 +1,7 @@
 package arrayList.Task;
 
+import java.util.Objects;
+
 public class User {
 	
 //	1. private
@@ -21,49 +23,51 @@ public class User {
 	}
 
 //	3. getter, setter
-	protected String getName() {
-		return name;
-	}
-
-	protected void setName(String name) {
-		this.name = name;
-	}
-
-	protected String getId() {
+	public String getId() {
 		return id;
 	}
-
-	protected void setId(String id) {
+	
+	public void setId(String id) {
 		this.id = id;
 	}
-
-	protected String getPassword() {
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getPassword() {
 		return password;
 	}
-
-	protected void setPassword(String password) {
+	
+	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	protected String getPhone() {
+	
+	public String getPhone() {
 		return phone;
 	}
-
-	protected void setPhone(String phone) {
+	
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
 
 //	4. toString()
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", password=" + password + ", phone=" + phone + "]";
 	}
-	
-//	5. Equals, Hashcode
+
+	//	5. Equals, Hashcode
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -75,5 +79,9 @@ public class User {
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
+	
+
+	
+	
 }
 

@@ -43,7 +43,7 @@ public class UserField {
 //	- id를 찾으면 password 검사
 //	- 찾은 user를 리턴
 	public User login(User user) {
-		User  = checkId(user.getId());
+		User userInDB = checkId(user.getId());
 		if(userInDB == null) {
 			System.out.println("회원이 존재하지 않습니다.");
 			return null;
@@ -67,51 +67,40 @@ public class UserField {
 	
 //	4. 회원탈퇴
 	
-	public void ouserInDBut(User user) {
-		User removedUser = checkId(session);
-		System.out.println("회원탈퇴");
+	public void withdraw() {
+		User removeUser = checkId(session);
 		
+		System.out.println("회원탈퇴 완료");
+		users.remove(removeUser);
 	}
-	
-	
-	
-	
+
 	
 //	5. 비밀번호 변경(마이페이지)
 	
-	public User changePassword(User user) {
-		User userInPs = checkId(user.getId()); // 주소
-		if(user == null) {
-			changePassword(userInPs);
-			
+	public void update(User user) {
+		User userInDb = checkId(user.getId());
+		if(userInDb != null) {
+			userInDb.setPassword(encode(user.getPassword()));
 		}
-		
-		return userInPs;
 	}
-	
-	
 	
 	
 //	6. 비밀번호 변경(비밀번호 변경 30일)
 	
-	private User passChange(User user) {
-		User chasnge = checkId(session);
-		
-		if(user == chasnge) {
-			passChange(user);		
-			
+	public boolean update(String password, String newPassword) {
+		User foundUser = checkId(session);
+		if(foundUser.getPassword().equals(password)) {
+			foundUser.setPassword(encode(newPassword));
+			return true;
 		}
-		
-		return chasnge;
-		
-		
+		return false;
 	}
+
 	
 	
 	
 	
 //	7. 인증번호 전송
-	
 //	8. 인증번호 확인
 	
 	public static void main(String[] args) {
@@ -124,29 +113,15 @@ public class UserField {
 //		System.out.println(uf.users);
 		
 		User currentUser = uf.login(new User("hong123", "홍길동", "1234", "010-1234-1234"));
-		System.out.println(currentUser);
+
+//		uf.withdraw();
+		System.out.println(uf.users);
 		
 		
-		
-		
-		uf.changePassword(new currentUser("hong123", "홍길동", "5678", "010-1234-1234"));
-		System.out.println(uf.changePassword(currentUser));
-		
-		uf.passChange(currentUser);
-		System.out.println(uf.passChange(user2));
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		uf.update(new User("hong123", "홍길동", "12345678", "010-4567-4567"));
+		System.out.println(uf.users);
 	}
 }
+
+
+

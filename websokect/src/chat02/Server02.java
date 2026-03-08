@@ -16,9 +16,9 @@ public class Server02 {
 		System.out.println("서버가 시작되었습니다. 클라이언트를 기다리는 중...");
 		try(
 				ServerSocket serverSocket = new ServerSocket(1100);
-				Socket socket = serverSocket.accept();
-				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream())); //읽음
-				BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())); //작석
+				Socket socket = serverSocket.accept(); // 한명만 받을 수 있음
+				BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())); // 보내기
+				BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream())); // 받기
 				Scanner sc = new Scanner(System.in);
 				
 			){
@@ -27,7 +27,7 @@ public class Server02 {
 				
 				while(true) {
 					System.out.println("클라이언트로 메세지 보내기 >>");
-					serverMessage = sc.nextLine();
+					serverMessage = sc.nextLine(); // 입력
 					bufferedWriter.write(serverMessage + "\n");
 					bufferedWriter.flush();
 					System.out.println("[서버]: " + serverMessage);

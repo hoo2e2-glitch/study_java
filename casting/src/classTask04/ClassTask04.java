@@ -47,18 +47,23 @@ package classTask04;
 
 public class ClassTask04 {
 	public static void main(String[] args) {
+		Market market = new Market("당근마켓");
+		Product product1 = new Product("당근", 10000, 100);
+		Product product2 = new Product("당근", 10000, 100);
 		
+		MarketMember member = new MarketMember("김회원", "01012341234", 1000000);
+		MarketNonMember noMember = new MarketNonMember("노회원", "01034567890", 1000000);
 		
-		Market bMart = new Market();
+		market.registerProduct(product1);
+		market.showProducts();
 		
+//		상품이 판매되면
+		market.sell("당근", 2, member);
+		market.sell("당근", 2, noMember);
 		
-		bMart.addProduct(null);
-		bMart.sellingProduct(null, null, 0);
-		bMart.addPoint(null); 
-		
-		
-	
-	
+		System.out.println("===============");
+		member.printInfo();
+		System.out.println("===============");
+		noMember.printInfo();
 	}
-
 }

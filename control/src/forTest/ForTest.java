@@ -7,8 +7,8 @@ public class ForTest {
 			System.out.println(i + 1);
 			
 		// a~z
-		for(int i = 0; i < 26; i++) {
-			System.out.println((char)('A' + i));
+		for(int j = 0; j < 26; j++) {
+			System.out.println((char)('A' + j));
 		}
 		}
 	}

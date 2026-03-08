@@ -21,7 +21,7 @@ public class ClientThread implements Runnable {
 		
 		try {
 			while((line = input.readLine()) != null) {
-				System.out.println(input);
+				System.out.println(line);
 			}
 		}catch (IOException e) {
 			e.printStackTrace();
@@ -30,3 +30,19 @@ public class ClientThread implements Runnable {
 	}
 
 }
+
+
+//## 전체 흐름으로 보면
+//
+//Client 에서
+//new ClientThread(input) 으로 생성
+//        ↓
+//thread1.start() 로 실행
+//        ↓
+//run() 시작
+//        ↓
+//while문으로 서버 메시지 계속 기다림
+//        ↓
+//메시지 오면 → 화면에 출력
+//메시지 오면 → 화면에 출력
+//메시지 오면 → 화면에 출력 ... 무한반복

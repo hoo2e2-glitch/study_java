@@ -9,33 +9,42 @@ public class Uesr {
 	
 	public Uesr() {;}
 
+//	alt + sh + s + o
 	public Uesr(Long id, String name) {
+		super();
 		this.id = id;
 		this.name = name;
 	}
 
-	protected Long getId() {
+	//	alt + sh + s + r + alt a + alt r
+	public Long getId() {
 		return id;
 	}
-
-	protected void setId(Long id) {
+	
+	
+	public void setId(Long id) {
 		this.id = id;
 	}
-
-	protected String getName() {
+	
+	
+	public String getName() {
 		return name;
 	}
-
-	protected void setName(String name) {
+	
+	
+	public void setName(String name) {
 		this.name = name;
 	}
-
 	
+
+
 	@Override
 	public String toString() {
 		return "Uesr [id=" + id + ", name=" + name + "]";
 	}
 	
+
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);

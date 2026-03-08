@@ -38,23 +38,23 @@ public class OperTast01 {
 		// 평균이 60점 초과면 합격, 60점 미만이면 불합격, 60점이면 재평가를 출력
 		// 단 if문을 사용하지 않는다.
 		// 평균은 소수점 2번째 자리까지만 표기한다.
-		Scanner sc = new Scanner(System.in);
-		String message = "수학, 영어, 국어 점수를 차례대로 입력하세요.\nex)70 80 80", result = "";
+		Scanner sc2 = new Scanner(System.in);
+		String message2 = "수학, 영어, 국어 점수를 차례대로 입력하세요.\nex)70 80 80", result2 = "";
 		int mathScore = 0, engScore = 0, korScore = 0, totalScore = 0;
 		double average = 0.0;
-		System.out.println(message);
+		System.out.println(message2);
 		
-		mathScore = sc.nextInt();
-		engScore = sc.nextInt();
-		korScore = sc.nextInt();
+		mathScore = sc2.nextInt();
+		engScore = sc2.nextInt();
+		korScore = sc2.nextInt();
 		
 		totalScore = mathScore + engScore + korScore;
 		average = totalScore / 3.0;
 		
-		result = average > 60 ? "합격" 
+		result2 = average > 60 ? "합격" 
 				: average < 60 ? "불합격" : "재평가"; 
 		
-		System.out.println(result);
+		System.out.println(result2);
 	
 	}
 }

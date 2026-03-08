@@ -12,10 +12,10 @@ import java.util.List;
 // 서버에 클라이언트가 접속하면 소켓에 OutputStream들만 모두 outputList에 추가
 public class ServerThread implements Runnable{
 	
-	private final Socket socket;
-	private final List<PrintWriter> outputList;
-	private PrintWriter output;
-	private BufferedReader input;
+	private final Socket socket; // 담당 클라이언트 소켓
+	private final List<PrintWriter> outputList; // 전체 접속자 보내는 통로 목록
+	private PrintWriter output; // 이 클라이언트한테 보내는 통로
+	private BufferedReader input; // 이 클라이언트한테서 받는 통로
 	
 	public ServerThread() {
 		this.socket = null;
@@ -28,8 +28,8 @@ public class ServerThread implements Runnable{
 		this.outputList = outputList;
 		
 		try {
-				output = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
-				input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				output = new PrintWriter(new OutputStreamWriter(socket.getOutputStream())); // 이 클라이언트한테 보내는 통로 생성
+				input = new BufferedReader(new InputStreamReader(socket.getInputStream())); // 이 클라이언트한테서 받는 통로 생성
 				
 				synchronized (outputList) {
 					outputList.add(output);

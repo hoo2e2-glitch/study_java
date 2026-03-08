@@ -12,7 +12,7 @@ public class Server {
 	public static void main(String[] args) {
 		 String clientMessage = null, serverMessage = null;
 	      ServerSocket serverSocket = null; 
-	      List<PrintWriter> outputList = Collections.synchronizedList(new ArrayList<>());
+	      List<PrintWriter> outputList = Collections.synchronizedList(new ArrayList<>()); // 접속한 클라이언트들의 보내는 통로 목록
 	      
 	      try {
 	         serverSocket = new ServerSocket(7777);
@@ -48,7 +48,11 @@ public class Server {
 	}
 
 
-
+//try 블록 = 방 안
+//finally 블록 = 복도
+//
+//방 안에서 만든 물건 → 복도에서 못 씀
+//복도에서 만든 물건 → 방 안에서도 복도에서도 다 씀
 
 
 

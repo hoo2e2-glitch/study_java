@@ -11,6 +11,7 @@ public class FileTask {
 	public static void main(String[] args) throws IOException {
 		String[] foods = {"잔치국수", "피자", "한우", "스테이크"};
 //      음식 4가지를 메모장으로 만들고 콘솔에 출력
+		
 //		쓰기
 //      BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("./food.txt", true));
 //      

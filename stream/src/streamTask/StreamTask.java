@@ -73,15 +73,6 @@ public class StreamTask {
 						.forEach(System.out::println);
 	
 		
-		
-		
-		MyFind02 myFind2 =
-		        user -> new StringBuilder(user.getJob()).reverse().toString();
-		        
-		        users.stream()
-		        .filter(user -> user.getAge() >= 30 && user.getAge() < 40)
-		        .map(myFind2::reverseJob)
-		        .forEach(System.out::println);
 		        
 //		        강사님 풀이
 //				30대 유저의 직업만 거꾸로 뒤집어 출력

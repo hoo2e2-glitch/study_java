@@ -1,5 +1,7 @@
 package objectTest;
 
+import java.util.Objects;
+
 public class ObjectTest {
 
 //	1. private : 직접 접근 금지 / 화면호출
@@ -15,6 +17,7 @@ public class ObjectTest {
 }
 	
 //	4. get / set
+	
 	public String getName() {
 		return name;
 	}
@@ -22,31 +25,36 @@ public class ObjectTest {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
 
 //	6. toString() : 해당 객체 
 //	재정의하기 / 필드 봐야함
-//	alt + sh + s + s
-	
+//	alt + sh + s + s + alt g
 	@Override
 	public String toString() {
 		return "ObjectTest [name=" + name + "]";
 	}
 	
+//	7. hashCode(), equals
+//	alt + sh + s + h + alt + g
 	@Override
 	public int hashCode() {
-		// TODO Auto-generated method stub
-		return super.hashCode();
-	}
-	
-	@Override
-	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return super.equals(obj);
+		return Objects.hash(name);
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ObjectTest other = (ObjectTest) obj;
+		return Objects.equals(name, other.name);
+	}
 	
-	
+
 	public static void main(String[] args) {
 		ObjectTest ot = new ObjectTest();
 		System.out.println(ot);

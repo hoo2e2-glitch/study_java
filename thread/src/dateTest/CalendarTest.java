@@ -12,8 +12,7 @@ public class CalendarTest {
 //		프로그램 전체에서 단 하나의 객체만 존재하는 것을 보장하는 디자인 패턴
 //		new Calendar - 안됨
 		Calendar calendar = Calendar.getInstance();		
-		System.out.println(calendar.getTime());
-		
+//		System.out.println(calendar.getTime());
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		
 		System.out.println(simpleDateFormat.format(calendar.getTime()));
@@ -25,7 +24,7 @@ public class CalendarTest {
 		LocalDateTime now2 = LocalDateTime.now();
 		System.out.println(now2);
 		System.out.println(now2.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 hh시 mm분 ss초")));
-		System.out.println(LocalDateTime.parse("1990년 10월 13일", DateTimeFormatter.ofPattern("yyyy년 MM월 dd일")));
+		System.out.println(LocalDate.parse("1990년 10월 13일", DateTimeFormatter.ofPattern("yyyy년 MM월 dd일")));
 		
 		
 				

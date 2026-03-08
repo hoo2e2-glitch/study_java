@@ -1,4 +1,4 @@
-package hashset.test;
+package hashset.Test;
 
 import java.time.Duration;
 import java.time.Instant;

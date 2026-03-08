@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 
-// 서버에서 직접 메세지를 입력받아서 클라이언트에게 
+//서버에서 직접 메세지를 입력받아서 클라이언트에게 전송하는 쓰레드
 public class ServerOutputThread implements Runnable{
 	
 	private final List<PrintWriter> outputList;
